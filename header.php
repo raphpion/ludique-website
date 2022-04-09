@@ -10,6 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- TODO: the metadata -->
+  <?php get_stylesheet() ?>
+  <?php get_header_scripts() ?>
   <title><?php echo WEBSITE_TITLE ?></title>
 </head>
 <body>

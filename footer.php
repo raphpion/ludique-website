@@ -1,4 +1,4 @@
-  <!-- TODO: include scripts here -->
+  <?php get_footer_scripts() ?>
   <footer>
     <!-- TODO: footer content -->
   </footer>
