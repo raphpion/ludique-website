@@ -14,6 +14,9 @@ define( 'WEBSITE_TITLE', '' );
 define( 'WEBSITE_LOCALE', '' );
 
 // ** Directory information - Used by functions that need to access the file system. */
-/** Absolute path from your server's root to the website directory. */
+/** Absolute path from your computer home folder to the website directory. */
 define( 'ABSPATH', __DIR__ . '/' );
+
+/** Relative path from your server root to the website directory */
+define( 'RELPATH', '');
 ?>

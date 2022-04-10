@@ -4,6 +4,5 @@
  */
 ?>
   <main>
-    <!-- TODO: the router view goes here -->
-    <h1>Hello world!</h1>
+    <?php Router::the_view() ?>
   </main>
