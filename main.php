@@ -4,5 +4,5 @@
  */
 ?>
   <main>
-    <?php Router::the_view() ?>
+    <?php the_view() ?>
   </main>

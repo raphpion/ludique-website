@@ -52,7 +52,22 @@ function get_footer_scripts() {
  * @return Boolean if the homepage is being rendered
  */
 function is_homepage() {
-  echo get_route();
-  if (get_route() == '' || get_route() == '/' || get_route == '/home') return true;
-  return false;
+  return Router::is_home_route();
+}
+
+/**
+ * Echo the content of the 'title' tag
+ */
+function the_title() {
+  $title = '';
+  $title .= Router::get_the_title();
+  if (defined('WEBSITE_TITLE')) $title .= ' | ' . WEBSITE_TITLE;
+  echo $title;
+}
+
+/**
+ * Display the current view
+ */
+function the_view() {
+  Router::the_view();
 }

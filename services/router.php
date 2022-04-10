@@ -52,10 +52,28 @@ class Router {
   }
 
   /**
+   * Checks if the home route is being rendered
+   * 
+   * @return Boolean if the home route is being rendered
+   */
+  public static function is_home_route() {
+    if (Router::get_route()->get_title() == 'Home') return true;
+    return false;
+  }
+
+  /**
+   * Get the page title from the current path
+   * @return String the route title
+   */
+  public static function get_the_title() {
+    return Router::get_route()->get_title();
+  }
+
+  /**
    * Insert the page title from the current path
    */
   public static function the_title() {
-    echo Router::get_route()->get_title();
+    echo Router::get_the_title();
   }
   
   /**

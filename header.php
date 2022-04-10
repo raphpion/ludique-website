@@ -4,7 +4,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo WEBSITE_LOCALE ?>">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   <!-- TODO: the metadata -->
   <?php get_stylesheet() ?>
   <?php get_header_scripts() ?>
-  <title><?php echo WEBSITE_TITLE ?></title>
+  <title><?php the_title() ?></title>
 </head>
 <body>
   <header>
