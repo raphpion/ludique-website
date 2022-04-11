@@ -4,8 +4,8 @@
  */
 
 /** Copy the config sample if config.php doesn't exist, then load the config file */
-if (!file_exists('config.php'))
-  copy('config-sample.php', 'config.php');
+if (!file_exists( 'config.php' ))
+  copy( 'config-sample.php', 'config.php' );
 require_once __DIR__ . '/config.php';
 
 /** Include services */
@@ -56,12 +56,19 @@ function is_homepage() {
 }
 
 /**
+ * Echo the website home URL
+ */
+function the_home_url() {
+  echo WEBSITE_URL;
+}
+
+/**
  * Echo the content of the 'title' tag
  */
 function the_title() {
   $title = '';
   $title .= Router::get_the_title();
-  if (defined('WEBSITE_TITLE')) $title .= ' | ' . WEBSITE_TITLE;
+  if ( defined( 'WEBSITE_TITLE' ) ) $title .= ' | ' . WEBSITE_TITLE;
   echo $title;
 }
 
@@ -70,4 +77,28 @@ function the_title() {
  */
 function the_view() {
   Router::the_view();
+}
+
+/**
+ * Insert a component
+ */
+function get_component( $name ) {
+  require __DIR__ . '/components/' . $name . '.php';
+}
+
+/**
+ * Get all the navbar links
+ */
+function get_navbar_links() {
+  $arr = array();
+  foreach ( Router::get_routes() as $route )
+    if ( $route->in_navbar() ) array_push( $arr, $route );
+  return $arr;
+}
+
+/**
+ * Echo the active class if the link corresponds to the current page
+ */
+function the_active_class( $slug ) {
+  if ( Router::get_route()->get_slug() == $slug ) echo ' active';
 }

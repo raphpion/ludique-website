@@ -13,6 +13,9 @@ define( 'WEBSITE_TITLE', '' );
 /** The website locale - mostly used for accessibility */
 define( 'WEBSITE_LOCALE', '' );
 
+/** Website home URL */
+define( 'WEBSITE_URL', '');
+
 // ** Directory information - Used by functions that need to access the file system. */
 /** Absolute path from your computer home folder to the website directory. */
 define( 'ABSPATH', __DIR__ . '/' );

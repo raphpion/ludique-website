@@ -16,6 +16,6 @@
 </head>
 <body>
   <header>
-    <!-- TODO: Include header content here -->
+    <?php get_component('navbar') ?>
   </header>
   
