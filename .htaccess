@@ -1,3 +1,9 @@
-RewriteEngine on
-
-RewriteRule ^((?!index\.php).+)$ /index.php [L]
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /olympus/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /ludique-website/index.php [L]
+</IfModule>
