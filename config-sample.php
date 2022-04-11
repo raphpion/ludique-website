@@ -4,6 +4,8 @@
  *
  * * Website information
  * * Directory information
+ * 
+ * In the .htaccess, remember to update the RewriteRule statement with the local path.
  */
 
 // ** Website information - These will be displayed at various locations on your website. ** //
