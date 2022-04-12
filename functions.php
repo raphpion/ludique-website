@@ -26,6 +26,9 @@ function get_stylesheet() {
   /** style.css */
   $stylesheet .= '<link rel="stylesheet" href="style.css">';
 
+  /** Favicon */
+  $stylesheet .= '<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">';
+
   //* Add your stylesheet here
   echo $stylesheet;
 }

@@ -1,10 +1,14 @@
+.navbar-brand {
+  width: 32px;
+}
+
 .home-hero {
   background-image: url('assets/img/banner.svg');
   background-size: cover;
   color: #fff;
 }
 
-.home-hero__join-us {
+.home-hero .btn {
   font-size: 1.25rem;
 }
 

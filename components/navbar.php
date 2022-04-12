@@ -4,7 +4,7 @@ $links = get_navbar_links();
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="<?php the_home_url() ?>">Ludique Gaming</a>
+    <a class="navbar-brand" href="<?php the_home_url() ?>" title="<?php echo WEBSITE_TITLE ?>"><img src="<?php echo RELPATH . '/assets/img/logo.svg' ?>" alt="Ludique Gaming logo"></a>
     <?php if ( !empty( $links ) ): ?>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
